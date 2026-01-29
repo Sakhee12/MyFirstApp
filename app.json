@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "CarHub",
+    "scheme": "carhub",
     "slug": "carhub",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,6 +15,9 @@
         "foregroundImage": "./assets/splash.jpg",
         "backgroundColor": "#0F172A"
       }
-    }
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker"
+    ]
   }
 }

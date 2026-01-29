@@ -71,7 +71,7 @@ export default function Dashboard() {
 
       {/* User Card */}
       <TouchableWithoutFeedback
-        onPress={() => animatePress(scaleUser, () => router.push('/user'))}
+        onPress={() => animatePress(scaleUser, () => router.push('/user/login'))}
       >
         <Animated.View style={[styles.card, styles.shadow, styles.cardAccentBlue, { transform: [{ scale: scaleUser }] }]}>
           <BlurView intensity={70} tint="light" style={styles.cardInner}>

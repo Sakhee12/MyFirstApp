@@ -1,31 +1,13 @@
-import { useColorScheme } from '@/hooks/use-color-scheme';
-import { Stack } from 'expo-router';
-import 'react-native-reanimated';
-import { AppModeProvider } from '../context/AppModeContext';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { Stack } from "expo-router";
+import { AuthProvider } from "../context/AuthContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
-   //return <Stack screenOptions={{ headerShown: false }} />;
-
-    return (
-    <AppModeProvider>
-      
-      <Stack screenOptions={{ headerShown: false }} />
-    </AppModeProvider>
+  return (
+    <AuthProvider>
+      <ThemeProvider>
+        <Stack screenOptions={{ headerShown: false }} />
+      </ThemeProvider>
+    </AuthProvider>
   );
-
-  // return (
-  //   <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-  //     <Stack>
-  //       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-  //       <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-  //     </Stack>
-  //     <StatusBar style="auto" />
-  //   </ThemeProvider>
-  // );
 }

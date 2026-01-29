@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
+    marginBottom: 22,
   },
   label: {
     color: "white",

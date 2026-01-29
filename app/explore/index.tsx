@@ -5,6 +5,7 @@ import { Animated, StyleSheet, Text, TouchableOpacity, View } from "react-native
 import OwnerDashboard from "./ownerPreview";
 import UserExplore from "./userPreview";
 
+
 export default function ExploreRoot() {
   const [isOwnerMode, setIsOwnerMode] = useState(false);
   const slideAnim = useRef(new Animated.Value(0)).current;
@@ -34,6 +35,7 @@ export default function ExploreRoot() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.switchBtn} onPress={() => toggleMode(true)}>
+
           <Text style={styles.switchText}>Owner</Text>
         </TouchableOpacity>
       </View>
